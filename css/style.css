@@ -1,0 +1,684 @@
+/* 公共样式表css */
+html,body {
+    color: #333;
+    margin: 0;
+    height: 100%;
+    font-family: "Myriad Set Pro","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: normal;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+img {
+    border: 0;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #a8deee;
+    background-image: 
+      radial-gradient(closest-side,rgb(130, 205, 235),rgba(235,105,78,0)),
+      radial-gradient(closest-side,rgb(150, 155, 202),rgba(243,11,164,0)),
+      radial-gradient(closest-side,rgb(216, 204, 145),rgba(254,234,131,0)),
+      radial-gradient(closest-side,rgba(170,142,245,1),rgba(170,142,245,0)),
+      radial-gradient(closest-side,rgba(248,192,147,1),rgba(248,192,147,0));
+    background-size: 
+      130vmax 130vmax,
+      80vmax 80vmax,
+      90vmax 90vmax,
+      110vmax 110vmax,
+      90vmax 90vmax;
+    background-position: 
+      -80vmax -80vmax,
+      60vmax 60vmax,
+      10vmax 10vmax,
+      -30vmax -30vmax,
+      50vmax 50vmax;
+    background-repeat: no-repeat;
+    animation: 10s movement linear infinite;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #666;
+}
+
+@keyframes movement{
+    0%,100%{
+        background-size: 
+      130vmax 130vmax,
+      80vmax 80vmax,
+      90vmax 90vmax,
+      110vmax 110vmax,
+      90vmax 90vmax;
+    background-position: 
+      -80vmax -80vmax,
+      60vmax 60vmax,
+      10vmax 10vmax,
+      -30vmax -30vmax,
+      50vmax 50vmax;
+    }
+    25%{
+        background-size: 
+      100vmax 100vmax,
+      90vmax 90vmax,
+      100vmax 100vmax,
+      90vmax 90vmax,
+      60vmax 60vmax;
+    background-position: 
+      -60vmax -90vmax,
+      50vmax -40vmax,
+      0vmax -20vmax,
+      -40vmax -20vmax,
+      40vmax 60vmax;
+    }
+    50%{
+        background-size: 
+        80vmax 80vmax,
+        110vmax 110vmax,
+        80vmax 80vmax,
+        60vmax 60vmax,
+        80vmax 80vmax;
+      background-position: 
+        -50vmax -70vmax,
+        40vmax -30vmax,
+        10vmax 0vmax,
+        20vmax 10vmax,
+        30vmax 70vmax;
+    }
+    75%{
+        background-size: 
+        90vmax 90vmax,
+        90vmax 90vmax,
+        100vmax 100vmax,
+        90vmax 90vmax,
+        70vmax 70vmax;
+      background-position: 
+        -50vmax -40vmax,
+        50vmax -30vmax,
+        20vmax 0vmax,
+        -10vmax 10vmax,
+        40vmax 60vmax;
+    }
+}
+
+html, body, div, dl, dt, dd, ol, ul, li, h1, h2, h3, h4, h5, h6, p, blockquote, pre, button, fieldset, form, input, legend, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #08acee;
+}
+
+button {
+    outline: 0;
+}
+
+img {
+    border: 0;
+}
+
+button,input,optgroup,select,textarea {
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    outline: none;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #666;
+}
+
+a:hover {
+    color: #eee;
+}
+
+.clearfix::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.clearfix {
+}
+
+/* 必要布局样式css */
+.header-nav {
+    position: relative;
+    width: 100%;
+	z-index: 99999;
+    background-color: rgba(230, 230, 230, 0.3);
+    backdrop-filter: blur(20px);
+}
+
+.header-content {
+    width: 1230px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.header-logo {
+    float: left;
+}
+
+.header-logo a {
+    display: block;
+    padding: 16px 0;
+    color: #000000;
+    text-decoration: none;
+}
+
+.header-logo a img {
+    height: 32px;
+    display: block;
+    border: none;
+}
+
+.header-nav-list {
+    float: right;
+    margin-right: 45px;
+}
+
+.header-nav-list ul {
+    float: left;
+}
+
+.header-nav-list ul li {
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.header-nav-list ul li a {
+    color: #616161;
+    padding: 18px 20px;
+    font-size: 14px;
+    line-height: 28px;
+    background: none;
+    position: relative;
+    display: block;
+}
+
+.header-nav-list ul li a:hover {
+    color: #ffffff;
+}
+
+.header-nav-list ul li .cur {
+	color: #363636;
+	font-weight: bold;
+}
+
+
+
+.icon-dow {
+	width: 13px;
+	height: 13px;
+	background-size: 13px;
+	font-size: 12px;
+	margin-left: 2px;
+	position: relative;
+	top: 0px;
+	display: inline-block;
+	font-family: 'Glyphicons Halflings';
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-image: url(../images/down1.png);
+}
+
+.aui-dow-box {
+    position: absolute;
+    top: 200%;
+    left: 50%;
+    width: 140px;
+    padding: 30px 0;
+    background-color: rgba(230, 230, 230, 0.3);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 20px 10px rgba(105, 141, 196, 0.3);
+    visibility: hidden;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.aui-dow-box-list {
+    width: 720px;
+    left: 310px;
+    height: 365px;
+    padding: 30px 10px 30px 10px;
+}
+
+.drop-down:hover .aui-dow-box-list {
+    top: 100%;
+    visibility: visible;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.aui-down-menu {
+    padding: 0 24px;
+    width: auto;
+    float: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.aui-down-menu-title {
+    padding-bottom: 10px;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1;
+    border-bottom: 0;
+    margin-bottom: 0;
+}
+
+.aui-down-menu-list-title i {
+    float: left;
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+    display: block;
+    background-size: 15px;
+    background-repeat: no-repeat;
+    margin-top: 1px;
+}
+
+.icon-title001 {
+	float: left;
+	margin-right: 5px;
+	width: 15px;
+	height: 15px;
+	display: block;
+	background-size: 15px;
+	background-repeat: no-repeat;
+	margin-top: 1px;
+	background-image: url(../images/any.png);
+}
+
+
+.aui-down-menu-list {
+    float: left;
+    font-size: 0;
+}
+
+.aui-down-menu-list-item {
+    display: inline-block;
+    margin-bottom: 30px;
+    width: 239px;
+    line-height: 1;
+    padding-top: 0;
+}
+
+.aui-top-border {
+    border-top: 1px solid #f5f5f5;
+}
+
+.header-nav-list ul .aui-down-menu-list-item a {
+    padding: 0;
+    line-height: inherit;
+}
+
+.aui-down-menu-list-title {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #616161;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+
+.aui-down-menu-list-text {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    color: #919191;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.aui-down-menu-list-title:hover {
+    color: #000000;
+}
+
+.header-nav-list ul li a:hover .icon-dow {
+	background-image: url(../images/down.png);
+}
+
+.aui-about-dow {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	left: 0;
+	top: 110%;
+	min-width: 170px;
+	padding: 8px 10px;
+	background: #fff;
+	border-radius: 2px;
+	z-index: 9999;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+	-webkit-transition: all 0.25s ease-in-out;
+	-moz-transition: all 0.25s ease-in-out;
+	-o-transition: all 0.25s ease-in-out;
+}
+
+.drop-down:hover .aui-about-dow {
+    top: 100%;
+    opacity: 1;
+	z-index: 9999;
+    visibility: visible;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    filter: alpha(opacity=100);
+}
+
+.header-nav-list .aui-about-dow li a {
+    padding: 0;
+    line-height: inherit;
+    display: block;
+    padding: 8px 0 8px 15px;
+    color: #313131;
+    font-size: 16px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    color: #616161;
+}
+
+.header-nav-list .aui-about-dow li a:hover {
+    color: #000000;
+}
+
+.header-nav-list .aui-about-dow li {
+    width: 100px;
+}
+
+.header-nav-right {
+    float: right !important;
+}
+
+
+
+.icon-weChat {
+	float: left;
+	margin-right: 3px;
+	width: 15px;
+	height: 15px;
+	display: block;
+	background-size: 15px;
+	background-repeat: no-repeat;
+	margin-top: 3px;
+	background-image: url(../images/icon-sc.png);
+}
+
+.icon-tel {
+	float: left;
+	margin-right: 5px;
+	width: 15px;
+	height: 15px;
+	display: block;
+	background-size: 15px;
+	background-repeat: no-repeat;
+	margin-top: 3px;
+
+}
+
+.header-nav-weChat {
+    float: right !important;
+    position: relative;
+    margin-top: 21px;
+    margin-right: 24px;
+}
+
+.header-nav-weChat a {
+    display: inline-block;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    padding: 0 !important;
+    color: #313131;
+}
+
+.navbar-contact-shadowr, .navbar-contact .navbar-contact-shadowl {
+    visibility: hidden;
+}
+
+.navbar-contact-shadowl, .navbar-contact .navbar-contact-shadowr {
+    width: 1px;
+    height: 10px;
+    position: absolute;
+    bottom: -16px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.navbar-contact-shadowl {
+    left: 46%;
+    transform: rotate(40deg);
+}
+
+.navbar-contact-shadowr {
+    right: 46%;
+    transform: rotate(-40deg);
+}
+
+.navbar-contact-hover {
+    position: absolute;
+    left: -23px;
+    margin-top: 15px;
+    z-index: 999;
+    visibility: hidden;
+    width: 98px;
+    height: 98px;
+    background: #fff;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.navbar-contact-hover:before {
+    display: block;
+    content: "";
+    border-width: 9px;
+    border-style: solid;
+    border-color: transparent transparent #ffffff transparent;
+    position: absolute;
+    left: 40%;
+    bottom: 100%;
+}
+
+.navbar-contact-hover img {
+    width: 98px;
+    height: 98px;
+    padding: 7px;
+}
+
+.header-nav-weChat:hover .navbar-contact-hover, .header-nav-weChat:hover .navbar-contact-shadowl, .header-nav-weChat:hover .navbar-contact-shadowr {
+    visibility: visible;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.header-nav-tel {
+    margin-top: 21px;
+    margin-right: 34px;
+    position: relative;
+    float: right !important;
+}
+
+.header-nav-tel a {
+    display: inline-block;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    padding: 0 !important;
+    color: #313131;
+}
+
+.header-nav-tel a:hover {
+    color: #000000;
+}
+
+.aui-header-nav.solid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+}
+.down {/* ································下方为底部footer栏css设置 */
+	width: 100%;
+	height: 240px;
+	background-color: rgba(230, 230, 230, 0.3);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 20px 10px rgba(142, 167, 204, 0.3);
+	overflow: hidden; /* 防止里面盒子塌陷 */
+	margin-top: 70px;
+}
+.down .down_center {/* 底部版权栏等居中的大盒子 */
+	height: 42px;
+	width: 1150px;
+	margin-top: 99px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.down .down_center .down_c_side {/* 两边小盒子设置 */
+	height: 42px;
+	width: 320px;
+	float: left;
+	font-size: 0.86em;
+	color: #dcdcdc;
+	line-height: 42px;
+	text-align: right; /* 左侧浮动 并排放后面的盒子 */
+}
+.down .down_center .down_c_side img{vertical-align:middle;}
+.down .down_center .down_c_side img:hover {
+opacity : 0.6;
+transition:all .4s;   /* 0.4s过渡效果 鼠标滑过后图片不透明度为0.6 */ 
+}
+.down .down_center .down_c_center {/* 版权栏中间部分盒子设置 */
+	height: 42px;
+	width: 430px;
+	float: left;
+	text-align: center;
+	line-height: 42px;
+	font-size: 0.86em;
+	color: #ffffff;/* 文字缩进1em */
+	padding-left: 80px;
+}
+.down .down_center .down_c_side .logo1 { /* 底部logo尺寸设计 */
+	height: 42px;
+	width: 173px;
+	float: left;
+}
+.down .down_center .down_c_side .logo1 img{max-width:173px;}/* 限制logo最大宽度 避免溢出 */
+.down .down_center .down_c_side .f_gotop {/* 返回顶部盒子设置 */
+	height: 42px;
+	width: 97px;
+	float: left;
+	margin-left: 50px;
+	text-align:left;
+}
+
+.b-title {
+	font-size: 19px;
+	font-weight: bold;
+	color: #000;
+}
+
+
